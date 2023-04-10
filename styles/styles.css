@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,400;1,600&display=swap'); 
+/* Import das fontes dos textos .apresentacao__conteudo__ titulo e .apresentacao__conteudo__texto do site
+  do google fonts*/
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*height: 100vh; */ /*altura da página*/
+    box-sizing: border-box; /* Faz com que o elemento filho não saia do elemento pai */
+    background-color: var(--cor-primaria); /* Cor de fundo */
+    color: var(--cor-secundaria); /* Cor do texto*/
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+
+.apresentacao {
+    padding: 5% 15%; /* Aqui a cria a margem dentro do elemento */
+    display: flex; /* Comando para dizer que esse elemento '' apresentação '' vai usar FlexBox */
+    align-items: center; /* Alinha os elementos no centro */
+    justify-content: space-between; /* Aqui posiciona os elementos, no caso a foto e o texto */
+    gap: 82px;
+}
+
+.apresentacao__conteudo { /* nome da classe filho conforme o nome da classe pai separado por __ */
+    width: 50%; /* Largura para a section */
+    display: flex; /* Comando para dizer que esse elemento vai usar FlexBox */
+    flex-direction: column; /* Coloca os elementos em linha vertical*/
+    gap: 40px; /* Informa qual é o espaçamento entre os elementos filhos*/
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /* Fonte dos textos*/
+    font-family: var(--fonte-primaria); /*Importado do google fonts*/
+}
+
+strong {
+    color: var(--cor-terciaria);/* Cor do texto*/
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem; /* Fonte dos textos*/
+    font-family: var(--fonte-secundaria); /*Importado do google fonts*/
+}
+
+.apresentacao__links {
+    display: flex; /* Comando para dizer que esse elemento '' apresentação '' vai usar FlexBox */
+    flex-direction: column; /* Alinha em sentido vertical os elementos */
+    align-items: center; /* Alinha os elementos no centro */
+    justify-content: space-between; /*Aqui posiciona os elementos um do lado do outro, nesse caso os dois botões*/
+    gap: 32px; /* Distância entre um elemento e outro */
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria); /* border = borda dos botões e solid é o tipo de traço do botão que nesse caso é sólido*/
+    width: 50%; /* Largura do botão */
+    text-align: center; /* Alinhar o texto no centro*/
+    border-radius: 8px; /* Arredondamento da borda do botão */
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0; /* Espaçamento entre o nome e o topo dentro do botão / 
+    21.5 é o eixo vertical e o 0 é o eixo horizontal*/
+    text-decoration: none; /* Tira o sublinhado do texto */
+    color: var(--cor-secundaria); /* Cor do texto*/
+    font-family: var(--fonte-secundaria); /* Importado do google fonts*/
+
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+}
+
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media(max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+   
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width:auto;
+    }
+}
